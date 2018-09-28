@@ -1,4 +1,4 @@
-#include "TilesetsCodecFactory.h"
+#include "TilesetsCodecFactory.hpp"
 
 TilesetsCodecFactory::TilesetsCodecFactory(QWidget *parent)
 	: QMainWindow(parent)
