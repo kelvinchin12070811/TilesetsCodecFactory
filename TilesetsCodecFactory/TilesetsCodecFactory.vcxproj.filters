@@ -36,6 +36,15 @@
     <ClCompile Include="src\window\TilesetsCodecFactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\codec\VXAceToTiled.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\window\PreviewWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\window\ProgressWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="TilesetsCodecFactory.qrc">
@@ -46,9 +55,27 @@
     <QtUic Include="src\window\TilesetsCodecFactory.ui">
       <Filter>Form Files</Filter>
     </QtUic>
+    <QtUic Include="src\window\PreviewWindow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="src\window\ProgressWindow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="src\window\TilesetsCodecFactory.hpp">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\codec\Codec.hpp">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\codec\VXAceToTiled.hpp">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\window\PreviewWindow.hpp">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\window\ProgressWindow.hpp">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
