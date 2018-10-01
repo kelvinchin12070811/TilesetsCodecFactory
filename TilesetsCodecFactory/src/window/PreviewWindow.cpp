@@ -19,5 +19,5 @@ void PreviewWindow::setPreviewImage(QPixmap image)
 	this->image = std::move(image);
 
 	gScene->clear();
-	gScene->addItem(new QGraphicsPixmapItem(image));
+	gScene->addItem(new QGraphicsPixmapItem(this->image));
 }

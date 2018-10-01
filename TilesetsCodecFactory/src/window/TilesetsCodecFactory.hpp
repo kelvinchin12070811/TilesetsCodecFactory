@@ -19,6 +19,7 @@ private:
 
 private slots:
 	void loadTilesets();
+	void previewTileset();
 
 private:
 	QPixmap previewImage;

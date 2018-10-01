@@ -45,6 +45,9 @@
     <ClCompile Include="src\window\ProgressWindow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\codec\CodecRegistra.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="TilesetsCodecFactory.qrc">
@@ -78,5 +81,10 @@
     <QtMoc Include="src\window\ProgressWindow.hpp">
       <Filter>Header Files</Filter>
     </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\codec\CodecRegistra.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

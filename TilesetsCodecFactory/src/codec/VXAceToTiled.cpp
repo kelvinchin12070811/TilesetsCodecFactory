@@ -1,5 +1,7 @@
+#include <array>
+#include <map>
 #include <qfiledialog.h>
-#include "src/window/PreviewWindow.hpp"
+#include "CodecRegistra.hpp"
 #include "VXAceToTiled.hpp"
 
 VXAceToTiled::VXAceToTiled(QObject* parent):
@@ -7,22 +9,28 @@ VXAceToTiled::VXAceToTiled(QObject* parent):
 {
 }
 
-void VXAceToTiled::preview(const QPixmap& tileset, QRect logicalArea)
-{
-	auto previewWin = std::make_unique<PreviewWindow>();
-	previewWin->setPreviewImage(encodeTileset(tileset, logicalArea));
-	previewWin->show();
-}
-
-void VXAceToTiled::convert(const QPixmap& tileset, QRect logicalArea)
-{
-}
-
-QPixmap VXAceToTiled::encodeTileset(const QPixmap & tileset, QRect logicalArea)
+QPixmap VXAceToTiled::convert(const QPixmap& tileset, QRect logicalArea)
 {
 	QPixmap result;
-	result = tileset;
+	std::map<QPoint, std::array<AutoTile, 6>> tile;
+	for (int y = 0; y < logicalArea.height(); y += (32 * 3))
+	{
+		for (int x = logicalArea.x(); x < logicalArea.width(); x += (32 * 2))
+		{
+			
+		}
+	}
+
 	return result;
 }
 
+bool VXAceToTiled::validate(QRect logicalArea)
+{
+	if (logicalArea.width() % (32 * 2) != 0 || logicalArea.height() % (32 * 3) != 0)
+		return false;
+
+	return true;
+}
+
 int VXAceToTiled::typeId = qRegisterMetaType<VXAceToTiled*>();
+bool VXAceToTiled::registred = CodecRegistra::getInstance().registerCodec({ "VX Ace to Tiled", QMetaType::typeName(VXAceToTiled::typeId) });
